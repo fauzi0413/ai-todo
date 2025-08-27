@@ -1,0 +1,18 @@
+# umum
+.DS_Store
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.local
+.env.*.local
+.vercel/
+
+# monorepo
+client/node_modules/
+client/dist/
+server/node_modules/
+
+# data lokal
+data/

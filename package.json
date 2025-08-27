@@ -1,0 +1,27 @@
+{
+  "name": "ai-todo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n server,client -c green,magenta \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "dependencies": {
+    "@ibm-cloud/watsonx-ai": "^1.6.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.14",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "ibm-cloud-sdk-core": "^5.4.2",
+    "lucide-react": "^0.542.0",
+    "node-cron": "^4.2.1",
+    "react-day-picker": "^9.9.0",
+    "sweetalert2": "^11.22.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.0"
+  }
+}

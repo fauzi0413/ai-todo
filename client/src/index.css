@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Base (paksa light, benahi kontras) ==== */
+@layer base {
+  :root { color-scheme: light; }
+  html, body { @apply bg-slate-50 text-slate-900 antialiased; }
+}
+
+/* ==== Komponen utilitas ==== */
+@layer components {
+  .card { @apply bg-white rounded-2xl shadow-sm ring-1 ring-slate-200; }
+  .btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-xl font-medium transition
+                 outline-none focus-visible:ring-2 focus-visible:ring-offset-2; }
+  .btn-primary { @apply bg-indigo-600 text-white hover:bg-indigo-700 focus-visible:ring-indigo-600; }
+  .btn-ghost { @apply bg-white ring-1 ring-slate-300 hover:bg-slate-50; }
+  .input { @apply w-full px-3 py-2 rounded-xl bg-white ring-1 ring-slate-300
+                 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500; }
+  .pill { @apply text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 ring-1 ring-slate-200; }
+}
+
+@layer components {
+  /* Tombol solid (fill) */
+  .btn-solid { @apply inline-flex items-center justify-center h-9 px-4 rounded-xl text-sm font-semibold
+                       text-white shadow-sm transition
+                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+                       hover:brightness-95 active:brightness-90; }
+
+  .btn-blue  { @apply bg-blue-600  focus-visible:ring-blue-600; }
+  .btn-amber { @apply bg-amber-500 focus-visible:ring-amber-500; }
+  .btn-red   { @apply bg-red-600   focus-visible:ring-red-600; }
+}
